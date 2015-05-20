@@ -1,0 +1,23 @@
+/**
+ * @file
+ * @group Modules
+ * Sass Partial: modules/_promo-heading.scss
+ * 
+ * Contains styling for promotional headings.
+ */
+
+// Basic styling for a promo heading
+.promo-heading {
+  font-size: 1.9em;
+  line-height: 1.3; 
+}
+
+// Smaller heading
+.promo-heading--small {
+  font-size: 1.5em; 
+}
+
+// Centered heading
+.promo-heading--centered {
+  text-align: center;
+}

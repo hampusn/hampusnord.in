@@ -1,0 +1,6 @@
+/*!
+ * Main script for hampusnordin-limepark.
+ * 
+ * assets/src/js/main.js
+ */
+!function(t,e){if("function"==typeof Chart){Chart.defaults.global.tooltipTemplate="<%if (label){%><%=label%> <%= value %>%<%}%>";var a={introduction:{data:[{value:70,color:"#ddd",highlight:"#aaa",label:"Öl, vin & cocktails"},{value:15,color:"#bbb",highlight:"#888",label:"Mat"},{value:10,color:"#999",highlight:"#444",label:"Byggnader"},{value:5,color:"#666",highlight:"#222",label:"Övrigt & okänt"}],options:{percentageInnerCutout:40,animationSteps:30,animationEasing:"easeInOutQuint"}},experience:{data:[{value:40,color:"#517047",highlight:"#65855a",label:"Frontend"},{value:20,color:"#485B4D",highlight:"#4D6653",label:"Kundkontakt, idéarbete, research"},{value:40,color:"#407E48",highlight:"#44874A",label:"Backend"}],options:{percentageInnerCutout:40,animationSteps:40,animationEasing:"easeInOutQuint"}}};e.Charts={};var n=t("#chart-introduction");if(n.length){var i=n.get(0).getContext("2d");e.Charts.introduction=new Chart(i).Doughnut(a.introduction.data,a.introduction.options)}var o=t("#chart-experience");if(o.length){var l=o.get(0).getContext("2d");e.Charts.experience=new Chart(l).Doughnut(a.experience.data,a.experience.options)}}}(jQuery,this,this.document);

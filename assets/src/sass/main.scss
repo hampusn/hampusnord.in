@@ -1,0 +1,47 @@
+/*!
+ * @file
+ * @group hampusnordin-limepark
+ * @author Hampus Nordin
+ * 
+ * Main styling
+ * 
+ * Compiled and concat version. Check repo for source or:
+ * assets/src/sass/main.scss
+ * 
+ * Version: {{version}}
+ * Latest built: {{timestamp}}
+ */
+
+$color-background: #fafafa;
+$color-background-alt: #8caa81;
+
+$color-text: #65855a;
+$color-text-alt: #fff;
+
+$font-stack-base: "Source Sans Pro", sans-serif;
+$font-stack-heading: "Source Sans Pro", sans-serif;
+
+// Bourbon & Neat libraries
+
+@import "bourbon";
+@import "grid-settings";
+@import "neat";
+
+// Styling
+
+// Base contains default styling for generic elements.
+@import "base";
+
+// Layout partials contains generic rules for the structure 
+// such as the grids/columns.
+@import "layout/structure";
+@import "layout/responsive";
+
+// Modules are reusable parts.
+@import "modules/chart";
+@import "modules/photo";
+@import "modules/promo-heading";
+
+// Contains helper classes such for rules which could as easily 
+// have been inline in the html. But we don't really like those.
+@import "misc/helpers";

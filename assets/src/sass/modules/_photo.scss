@@ -1,0 +1,32 @@
+/**
+ * @file
+ * @group Modules
+ * Sass Partial: modules/_photo.scss
+ * 
+ * Contains styling for photos.
+ */
+
+// Basic styling for a photo/portrait
+.photo {
+  max-width: 100%;
+  width: 240px;
+}
+
+// Photo with rounded corners.
+// This should degrade to standard square 
+// in older browsers, but that's acceptable.
+.photo--rounded {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+// Responsive rules for photos
+
+// Center photo on tablet
+@include media($tablet) {
+  .photo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;  
+  }
+}

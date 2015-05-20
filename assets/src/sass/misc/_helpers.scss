@@ -1,0 +1,22 @@
+/**
+ * @file
+ * @group Misc
+ * Sass Partial: misc/_helpers.scss
+ * 
+ * Contains helper classes.
+ */
+
+// Floats the content to the left/right.
+// Some modules will use these classes to correct 
+// margins and other rules so leave them as they are.
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+
+// Simple text centering
+.text-centered {
+  text-align: center;
+}

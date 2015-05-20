@@ -1,0 +1,57 @@
+/**
+ * @file
+ * @group Structure
+ * Sass Partial: _base.scss
+ * 
+ * Contains base styling and resets.
+ */
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: $color-background;
+}
+
+body {
+  color: $color-text;
+  font: 300 18px/1.6 $font-stack-base;
+}
+
+h1, h2, h3, h4 {
+  margin: 0.6em 0 0.2em;
+}
+h1, h2, h3 {
+  font-weight: 200;
+}
+h4 {
+  font-size: 1.1em; 
+  font-weight: 400; 
+}
+
+p {
+  margin: 0 0 0.8em;
+}
+
+strong {
+  font-weight: 400; 
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+a {
+  color: $color-text;
+  
+  &:visited {
+    color: desaturate($color-text, 20%);
+  }
+  &:hover {
+    color: darken($color-text, 10%);
+    text-decoration: none;
+  }
+}
