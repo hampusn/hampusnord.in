@@ -12,22 +12,15 @@
  * Latest built: {{timestamp}}
  */
 
-$color-background: #fafafa;
-$color-background-alt: #8caa81;
+$tablet: "(max-width: 768px)";
+$mobile: "(max-width: 480px)";
 
-$color-text: #65855a;
-$color-text-alt: #fff;
-
-$font-stack-base: "Source Sans Pro", sans-serif;
-$font-stack-heading: "Source Sans Pro", sans-serif;
-
-// Bourbon & Neat libraries
-
+// Bourbon
 @import "bourbon";
-@import "grid-settings";
-@import "neat";
 
-// Styling
+// Misc & Helpers
+@import "misc/mixins";
+@import "misc/helpers";
 
 // Base contains default styling for generic elements.
 @import "base";
@@ -35,13 +28,11 @@ $font-stack-heading: "Source Sans Pro", sans-serif;
 // Layout partials contains generic rules for the structure 
 // such as the grids/columns.
 @import "layout/structure";
-@import "layout/responsive";
+
+// Sections
+@import "sections/greeting";
+@import "sections/experience";
+@import "sections/contact";
 
 // Modules are reusable parts.
-@import "modules/chart";
 @import "modules/photo";
-@import "modules/promo-heading";
-
-// Contains helper classes such for rules which could as easily 
-// have been inline in the html. But we don't really like those.
-@import "misc/helpers";

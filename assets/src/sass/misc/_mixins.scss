@@ -1,0 +1,15 @@
+/**
+ * @file
+ * @group Misc
+ * Sass Partial: misc/_mixins.scss
+ * 
+ * Contains helper mixins.
+ */
+
+@mixin mq($query) {
+  @if ($query) {
+    @media #{$query} {
+      @content;
+    }
+  }
+}

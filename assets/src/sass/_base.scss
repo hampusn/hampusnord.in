@@ -6,6 +6,15 @@
  * Contains base styling and resets.
  */
 
+$color-background: #fafafa;
+$color-background-alt: #8caa81;
+
+$color-text: #65855a;
+$color-text-alt: #fff;
+
+$font-stack-base: "Source Sans Pro", sans-serif;
+$font-stack-heading: "Source Sans Pro", sans-serif;
+
 html, body {
   margin: 0;
   padding: 0;

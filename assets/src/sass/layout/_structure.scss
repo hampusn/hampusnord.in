@@ -4,88 +4,41 @@
  * Sass Partial: layout/_structure.scss
  * 
  * Contains overall structure.
+ *
+ * 1. Config - Configuration and variables
+ * 2. Base - Basic styling
  */
 
-// General grid rules
+
+/*
+ * 1. Config
+ ****************/
+
+$container-width: 1024px;
+
+
+/*
+ * 2. Base
+ **************/
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 .container {
-  @include outer-container;
-  
-  .main {
-    @include span-columns(8);
-  }
-  .aside {
-    @include span-columns(4);
-  }
-}
-// List specific container rules
-ul.container {
-  padding: 0; // Override default list padding
-
-  li {
-    // List items should be of equal width
-    // Default to 2 items per row.
-    @include span-columns(6);
-    @include omega(2n);
-  }
+  margin-left: auto;
+  margin-right: auto;  
+  max-width: $container-width;
 }
 
-
-// Greeting section
-.greeting {
-  @include clearfix();
-
-  background: $color-background-alt;
-  color: $color-text-alt;
-  margin-bottom: 2em; 
-  padding: 3em 1em;
-  
-  h1 {
-    margin-top: 2em;
-  }
+.section {
+  padding-left: 2em;
+  padding-right: 2em;  
 }
 
-
-// Introduction section
-.introduction {
-  .main {
-    @include shift(4);
-  }
-  .aside {
-    @include shift(-12);
-  }
-}
-
-
-// Experience section
-.experience {
-  .aside {
-    margin-top: 2em; 
-  }
-}
-
-
-// Examples section
-.examples {
-  margin: 2em 0;
-}
-
-
-// Contact section
-.contact {
-  background: darken($color-background-alt, 10%);
-  padding: 3em 2em 8em;
-  
-  &, a {
-    color: $color-text-alt;
-  }
-
-  p {
-    font-size: 1.2em;
-    margin: 1em 0;
-    text-align: center;
-    
-    &.small {
-      font-size: 0.8em; 
-    }
-  }
+.flex {
+  @include display(flex);
 }

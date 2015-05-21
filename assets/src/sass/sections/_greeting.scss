@@ -1,0 +1,74 @@
+/**
+ * @file
+ * @group Sections
+ * Sass Partial: sections/_greeting.scss
+ * 
+ * Contains styling for the greeting section.
+ *
+ * 1. Config - Configuration and variables
+ * 2. Base - Basic styling
+ * 3. Responsive - Responsive rules
+ */
+
+
+/*
+ * 1. Config
+ ****************/
+
+$background: #8caa81;
+$color: #fff;
+
+
+/*
+ * 2. Base
+ **************/
+
+// Basic styling for a photo/portrait
+.greeting {
+  @include clearfix;
+
+  background: $background;
+  color: $color;
+  margin-bottom: 2em; 
+  padding-bottom: 3em; 
+  padding-top: 3em;
+  
+  .container.flex {
+    @include align-items(center);
+  }
+
+  .photo-wrapper {
+    margin: 0 2em 0 0;
+    width: 240px;
+  }
+
+  h1 {
+    @include flex(1);
+    
+    margin: 0;
+  }
+}
+
+
+/*
+ * 3. Responsive
+ *******************/
+
+@include mq($tablet) {
+  .greeting {
+    .container {
+      @include display(block);
+    }
+
+    // Center photo on tablet
+    .photo-wrapper {
+      text-align: center;
+      margin-right: 0; 
+      width: auto;
+    }
+
+    h1 {
+      margin-top: 2em;
+    }
+  }
+}
