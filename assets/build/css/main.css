@@ -9,7 +9,7 @@
  * assets/src/sass/main.scss
  * 
  * Version: 1.0.0
- * Latest built: Thu May 21 2015 10:17:00 GMT+0200 (CEST)
+ * Latest built: Fri May 22 2015 09:01:02 GMT+0200 (CEST)
  */
 /**
  * @file
@@ -49,10 +49,11 @@ html {
   background: #fafafa; }
 
 body {
-  color: #65855a;
+  color: #4e6745;
   font: 300 18px/1.6 "Source Sans Pro", sans-serif; }
 
 h1, h2, h3, h4 {
+  font-family: "Source Sans Pro", sans-serif;
   margin: 0.6em 0 0.2em; }
 
 h1, h2, h3 {
@@ -73,11 +74,11 @@ img {
   max-width: 100%; }
 
 a {
-  color: #65855a; }
+  color: #4e6745; }
   a:visited {
-    color: #706f70; }
+    color: #565557; }
   a:hover {
-    color: #4e6745;
+    color: #374831;
     text-decoration: none; }
 
 /**
@@ -197,6 +198,10 @@ html {
 /*
  * 2. Base
  **************/
+.experience h2 {
+  font-size: 1.2em;
+  font-weight: 400;
+  margin-bottom: 0.7em; }
 .experience .flex-column {
   -webkit-box-flex: 1;
   -moz-box-flex: 1;

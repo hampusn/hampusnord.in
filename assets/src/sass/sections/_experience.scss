@@ -17,6 +17,12 @@
 
 // Basic styling for a photo/portrait
 .experience {
+  h2 {
+    font-size: 1.2em;
+    font-weight: 400;
+    margin-bottom: 0.7em;
+  }
+
   .flex-column {
     @include flex(1);
     

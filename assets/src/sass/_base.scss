@@ -9,7 +9,7 @@
 $color-background: #fafafa;
 $color-background-alt: #8caa81;
 
-$color-text: #65855a;
+$color-text: darken(#65855a, 10%);
 $color-text-alt: #fff;
 
 $font-stack-base: "Source Sans Pro", sans-serif;
@@ -30,6 +30,7 @@ body {
 }
 
 h1, h2, h3, h4 {
+  font-family: $font-stack-heading; 
   margin: 0.6em 0 0.2em;
 }
 h1, h2, h3 {
