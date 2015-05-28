@@ -42,3 +42,10 @@ html {
 .flex {
   @include display(flex);
 }
+
+.flex-column {
+  // Needs a width constraint to calculate the flex properly.
+  // Primarly an issue in FireFox.
+  // http://www.w3.org/TR/css3-flexbox/#valdef-min-width-min-height-auto
+  min-width: 1px;
+}

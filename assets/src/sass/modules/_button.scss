@@ -1,0 +1,39 @@
+/**
+ * @file
+ * @group Modules
+ * Sass Partial: modules/_button.scss
+ * 
+ * Contains styling for buttons.
+ *
+ * 1. Config - Configuration and variables
+ * 2. Base - Basic styling
+ */
+
+
+/*
+ * 2. Config
+ ******************/
+
+$button-color: darken(#8caa81, 20%);
+$button-text-color: #fff;
+
+
+/*
+ * 2. Base
+ ******************/
+
+.button {
+  @include transition(background-color 0.15s ease-out);
+
+  background: $button-color;
+  color: $button-text-color;
+  display: inline-block;
+  padding: 0.4em 0.8em;
+  text-decoration: none;
+  position: relative;
+  
+  &:hover {
+    background: lighten($button-color, 10%);
+    color: $button-text-color;
+  }
+}

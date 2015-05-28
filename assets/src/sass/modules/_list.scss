@@ -1,0 +1,30 @@
+/**
+ * @file
+ * @group Modules
+ * Sass Partial: modules/_list.scss
+ * 
+ * Contains styling for lists.
+ *
+ * 1. Config - Configuration and variables
+ * 2. Base - Basic styling
+ */
+
+
+/*
+ * 2. Base
+ ******************/
+
+.list {
+  li {
+    margin-bottom: 0.2em; 
+  }
+}
+
+.list--clean {
+  list-style: none;
+  padding-left: 0;
+}
+
+.list-item {
+  display: block;
+}

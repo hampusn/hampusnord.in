@@ -35,4 +35,6 @@ $mobile: "(max-width: 480px)";
 @import "sections/contact";
 
 // Modules are reusable parts.
+@import "modules/button";
+@import "modules/list";
 @import "modules/photo";

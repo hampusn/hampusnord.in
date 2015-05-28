@@ -23,7 +23,6 @@ $color: #fff;
  * 2. Base
  **************/
 
-// Basic styling for a photo/portrait
 .greeting {
   @include clearfix;
 
@@ -56,13 +55,14 @@ $color: #fff;
 
 @include mq($tablet) {
   .greeting {
+    text-align: center;
+
     .container {
       @include display(block);
     }
 
     // Center photo on tablet
     .photo-wrapper {
-      text-align: center;
       margin-right: 0; 
       width: auto;
     }

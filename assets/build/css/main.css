@@ -9,7 +9,7 @@
  * assets/src/sass/main.scss
  * 
  * Version: 1.0.0
- * Latest built: Fri May 22 2015 09:01:02 GMT+0200 (CEST)
+ * Latest built: Thu May 28 2015 13:37:18 GMT+0200 (CEST)
  */
 /**
  * @file
@@ -46,7 +46,7 @@ html, body {
   padding: 0; }
 
 html {
-  background: #fafafa; }
+  background: #fdfffd; }
 
 body {
   color: #4e6745;
@@ -121,6 +121,9 @@ html {
   display: -ms-flexbox;
   display: flex; }
 
+.flex-column {
+  min-width: 1px; }
+
 /**
  * @file
  * @group Sections
@@ -175,14 +178,15 @@ html {
  * 3. Responsive
  *******************/
 @media (max-width: 768px) {
-  .greeting .container {
-    display: block; }
-  .greeting .photo-wrapper {
-    text-align: center;
-    margin-right: 0;
-    width: auto; }
-  .greeting h1 {
-    margin-top: 2em; } }
+  .greeting {
+    text-align: center; }
+    .greeting .container {
+      display: block; }
+    .greeting .photo-wrapper {
+      margin-right: 0;
+      width: auto; }
+    .greeting h1 {
+      margin-top: 2em; } }
 
 /**
  * @file
@@ -235,7 +239,62 @@ html {
  * 1. Base
  *************/
 .contact {
+  font-size: 1.3em;
+  margin-top: 2em;
   text-align: center; }
+
+/**
+ * @file
+ * @group Modules
+ * Sass Partial: modules/_button.scss
+ * 
+ * Contains styling for buttons.
+ *
+ * 1. Config - Configuration and variables
+ * 2. Base - Basic styling
+ */
+/*
+ * 2. Config
+ ******************/
+/*
+ * 2. Base
+ ******************/
+.button {
+  -webkit-transition: background-color 0.15s ease-out;
+  -moz-transition: background-color 0.15s ease-out;
+  transition: background-color 0.15s ease-out;
+  background: #5a764f;
+  color: #fff;
+  display: inline-block;
+  padding: 0.4em 0.8em;
+  text-decoration: none;
+  position: relative; }
+  .button:hover {
+    background: #719464;
+    color: #fff; }
+
+/**
+ * @file
+ * @group Modules
+ * Sass Partial: modules/_list.scss
+ * 
+ * Contains styling for lists.
+ *
+ * 1. Config - Configuration and variables
+ * 2. Base - Basic styling
+ */
+/*
+ * 2. Base
+ ******************/
+.list li {
+  margin-bottom: 0.2em; }
+
+.list--clean {
+  list-style: none;
+  padding-left: 0; }
+
+.list-item {
+  display: block; }
 
 /**
  * @file
