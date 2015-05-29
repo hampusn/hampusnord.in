@@ -7,11 +7,12 @@
  *
  * 1. Config - Configuration and variables
  * 2. Base - Basic styling
+ * 3. Contextual - Contains styling when in a combination of other modules
  */
 
 
 /*
- * 2. Config
+ * 1. Config
  ******************/
 
 $button-color: darken(#8caa81, 20%);
@@ -26,6 +27,8 @@ $button-text-color: #fff;
   @include transition(background-color 0.15s ease-out);
 
   background: $button-color;
+  border-bottom: 3px solid darken($button-color, 20%);
+  border-radius: 4px;
   color: $button-text-color;
   display: inline-block;
   padding: 0.4em 0.8em;
@@ -34,6 +37,18 @@ $button-text-color: #fff;
   
   &:hover {
     background: lighten($button-color, 10%);
+    border-bottom-color: darken($button-color, 10%);
+
     color: $button-text-color;
   }
+}
+
+
+/*
+ * 3. Contextual
+ ******************/
+
+// Extra margin right of the icon when in a button.
+.button.icon:before {
+  margin-right: 0.5em; 
 }
