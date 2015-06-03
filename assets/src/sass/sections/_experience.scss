@@ -16,18 +16,20 @@
  **************/
 
 .experience {
-  h2 {
-    font-size: 1.2em;
-    font-weight: 400;
-    margin-bottom: 0.7em;
-  }
-
   .flex-column {
     @include flex(1);
     
     &:nth-last-child(n+2) {
       margin-right: 4em; 
     }
+  }
+
+  .main {
+    @include flex(2);
+  }
+
+  .aside {
+    
   }
 }
 
