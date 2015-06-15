@@ -28,6 +28,7 @@ $mobile: "(max-width: 480px)";
 // Layout partials contains generic rules for the structure 
 // such as the grids/columns.
 @import "layout/structure";
+@import "layout/footer";
 
 // Sections
 @import "sections/greeting";

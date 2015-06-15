@@ -12,7 +12,7 @@ $color-background-alt: #8caa81;
 $color-text: darken(#65855a, 10%);
 $color-text-alt: #fff;
 
-$font-stack-base: "Source Sans Pro", sans-serif;
+$font-stack-base: "Roboto", sans-serif;
 $font-stack-heading: "Source Sans Pro", sans-serif;
 
 html, body {
@@ -40,6 +40,7 @@ h2 {
   font-size: 1.2em;
   font-weight: 400;
   margin-bottom: 0.7em;
+  margin-top: 1.5em; 
 }
 h3 {
   font-size: 1em;

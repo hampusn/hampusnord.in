@@ -9,7 +9,7 @@
  * assets/src/sass/main.scss
  * 
  * Version: 1.0.0
- * Latest built: Wed Jun 03 2015 14:28:06 GMT+0200 (CEST)
+ * Latest built: Mon Jun 15 2015 20:42:51 GMT+0200 (CEST)
  */
 /**
  * @file
@@ -50,7 +50,7 @@ html {
 
 body {
   color: #4e6745;
-  font: 300 18px/1.6 "Source Sans Pro", sans-serif; }
+  font: 300 18px/1.6 "Roboto", sans-serif; }
 
 h1, h2, h3, h4 {
   font-family: "Source Sans Pro", sans-serif;
@@ -62,7 +62,8 @@ h1, h2, h3 {
 h2 {
   font-size: 1.2em;
   font-weight: 400;
-  margin-bottom: 0.7em; }
+  margin-bottom: 0.7em;
+  margin-top: 1.5em; }
 
 h3 {
   font-size: 1em;
@@ -136,6 +137,28 @@ html {
 
 /**
  * @file
+ * @group Structure
+ * Sass Partial: layout/_footer.scss
+ * 
+ * Contains footer styling.
+ *
+ * 1. Config - Configuration and variables
+ * 2. Base - Basic styling
+ */
+/*
+ * 1. Config
+ ****************/
+/*
+ * 2. Base
+ **************/
+.page-footer {
+  font-size: 0.8em;
+  margin-bottom: 3em;
+  margin-top: 1.5em;
+  text-align: center; }
+
+/**
+ * @file
  * @group Sections
  * Sass Partial: sections/_greeting.scss
  * 
@@ -154,7 +177,7 @@ html {
 .greeting {
   background: #8caa81;
   color: #fff;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
   padding-bottom: 3em;
   padding-top: 3em; }
   .greeting::after {
@@ -253,8 +276,9 @@ html {
  * 1. Base
  *************/
 .contact {
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 1.3em;
-  margin-top: 2em;
+  margin-top: 3em;
   text-align: center; }
 
 /**
