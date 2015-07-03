@@ -7,6 +7,7 @@
  *
  * 1. Config - Configuration and variables
  * 2. Base - Basic styling
+ * 3. Footer - Footer related styling
  */
 
 
@@ -48,4 +49,15 @@ html {
   // Primarly an issue in FireFox.
   // http://www.w3.org/TR/css3-flexbox/#valdef-min-width-min-height-auto
   min-width: 1px;
+}
+
+
+/*
+ * 3. Footer
+ ****************/
+
+.page-footer {
+  font-size: 0.9em; 
+  padding: 1em 1em 5em;
+  text-align: center;
 }

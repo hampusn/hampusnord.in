@@ -9,7 +9,7 @@
  * assets/src/sass/main.scss
  * 
  * Version: 1.0.0
- * Latest built: Wed Jun 03 2015 14:28:06 GMT+0200 (CEST)
+ * Latest built: Fri Jul 03 2015 12:09:01 GMT+0200 (CEST)
  */
 /**
  * @file
@@ -49,8 +49,8 @@ html {
   background: #fdfffd; }
 
 body {
-  color: #4e6745;
-  font: 300 18px/1.6 "Source Sans Pro", sans-serif; }
+  color: #475d3f;
+  font: 300 18px/1.6 "Roboto", sans-serif; }
 
 h1, h2, h3, h4 {
   font-family: "Source Sans Pro", sans-serif;
@@ -84,11 +84,11 @@ img {
   max-width: 100%; }
 
 a {
-  color: #4e6745; }
+  color: #475d3f; }
   a:visited {
-    color: #565557; }
+    color: #4f4e4f; }
   a:hover {
-    color: #374831;
+    color: #303f2b;
     text-decoration: none; }
 
 /**
@@ -100,6 +100,7 @@ a {
  *
  * 1. Config - Configuration and variables
  * 2. Base - Basic styling
+ * 3. Footer - Footer related styling
  */
 /*
  * 1. Config
@@ -133,6 +134,14 @@ html {
 
 .flex-column {
   min-width: 1px; }
+
+/*
+ * 3. Footer
+ ****************/
+.page-footer {
+  font-size: 0.9em;
+  padding: 1em 1em 5em;
+  text-align: center; }
 
 /**
  * @file
@@ -286,6 +295,9 @@ html {
   padding: 0.4em 0.8em;
   text-decoration: none;
   position: relative; }
+  .button:visited {
+    background-color: #42573b;
+    color: #fff; }
   .button:hover {
     background: #719464;
     border-bottom-color: #42573b;

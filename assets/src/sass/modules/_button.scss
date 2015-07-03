@@ -35,6 +35,11 @@ $button-text-color: #fff;
   text-decoration: none;
   position: relative;
   
+  &:visited {
+    background-color: darken($button-color, 10%);
+    color: $button-text-color;
+  }
+
   &:hover {
     background: lighten($button-color, 10%);
     border-bottom-color: darken($button-color, 10%);
