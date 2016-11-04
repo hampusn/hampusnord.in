@@ -9,7 +9,7 @@
  * assets/src/sass/main.scss
  * 
  * Version: 0.1.2
- * Latest built: Tue Sep 15 2015 14:52:22 GMT+0200 (CEST)
+ * Latest built: Fri Nov 04 2016 21:13:43 GMT+0100 (CET)
  */
 /**
  * @file
@@ -87,7 +87,7 @@ img {
 a {
   color: #475d3f; }
   a:visited {
-    color: #4f4e4f; }
+    color: #4e4e4e; }
   a:hover {
     color: #303f2b;
     text-decoration: none; }
@@ -232,6 +232,7 @@ html {
   flex: 1; }
   .experience .flex-column:nth-last-child(n+2) {
     margin-right: 4em; }
+
 .experience .main {
   -webkit-box-flex: 2;
   -moz-box-flex: 2;
@@ -316,7 +317,7 @@ html {
  * @group Modules
  * Sass Partial: modules/_icon.scss
  * 
- * Contains font icons from fontello.
+ * Contains styling for the svg icons.
  *
  * 1. Config - Configuration and variables
  * 2. Base - Basic styling
@@ -327,84 +328,14 @@ html {
 /*
  * 2. Base
  ******************/
-@font-face {
-  font-family: 'hampusn';
-  src: url('../font/hampusn.eot?62893916');
-  src: url('../font/hampusn.eot?62893916#iefix') format('embedded-opentype'), url('../font/hampusn.woff?62893916') format('woff'), url('../font/hampusn.ttf?62893916') format('truetype'), url('../font/hampusn.svg?62893916#hampusn') format('svg');
-  font-weight: normal;
-  font-style: normal; }
-
-.icon:before, .icon:before {
-  font-family: "hampusn";
-  font-style: normal;
-  font-weight: normal;
-  speak: none;
+.icon {
   display: inline-block;
-  text-decoration: inherit;
   width: 1em;
-  margin-right: .2em;
-  text-align: center;
-  /* opacity: .8; */
-  /* For safety - reset parent styles, that can break glyph codes*/
-  font-variant: normal;
-  text-transform: none;
-  /* fix buttons height, for twitter bootstrap */
-  line-height: 1em;
-  /* Animation center compensation - margins should be symmetric */
-  /* remove if not needed */
-  margin-left: .2em;
-  /* you can be more comfortable with increased icons size */
-  /* font-size: 120%; */
-  /* Font smoothing. That was taken from TWBS */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  /* Uncomment for 3D effect */
-  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */ }
-
-.icon-link-ext:before {
-  content: '\e800'; }
-
-.icon-github:before {
-  content: '\e801'; }
-
-.icon-bitbucket:before {
-  content: '\e802'; }
-
-.icon-twitter:before {
-  content: '\e803'; }
-
-.icon-instagram:before {
-  content: '\e804'; }
-
-.icon-stackexchange:before {
-  content: '\e805'; }
-
-.icon-linkedin:before {
-  content: '\e806'; }
-
-.icon-rss:before {
-  content: '\e807'; }
-
-.icon-down-open:before {
-  content: '\e808'; }
-
-.icon-left-open:before {
-  content: '\e809'; }
-
-.icon-right-open:before {
-  content: '\e80a'; }
-
-.icon-up-open:before {
-  content: '\e80b'; }
-
-.icon-tags:before {
-  content: '\e80c'; }
-
-.icon-share:before {
-  content: '\e80d'; }
-
-.icon-menu:before {
-  content: '\e80e'; }
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+  margin-right: 0.3em; }
 
 /**
  * @file
