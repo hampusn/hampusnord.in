@@ -1,7 +1,7 @@
 {
   "name": "hampusnordin",
   "description": "",
-  "version": "0.1.2",
+  "version": "0.2.1",
   "dependencies": {},
   "devDependencies": {
     "gulp": "^3.8.10",

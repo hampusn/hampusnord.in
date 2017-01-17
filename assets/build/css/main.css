@@ -8,8 +8,8 @@
  * Compiled and concat version. Check repo for source or:
  * assets/src/sass/main.scss
  * 
- * Version: 0.1.2
- * Latest built: Fri Nov 04 2016 21:13:43 GMT+0100 (CET)
+ * Version: 0.2.1
+ * Latest built: Tue Jan 17 2017 19:51:36 GMT+0100 (CET)
  */
 /**
  * @file
@@ -46,10 +46,10 @@ html, body {
   padding: 0; }
 
 html {
-  background: #fdfffd; }
+  background: #ecf0f1; }
 
 body {
-  color: #475d3f;
+  color: #2c3e50;
   font: 300 18px/1.6 "Roboto", sans-serif; }
 
 h1, h2, h3, h4 {
@@ -85,11 +85,11 @@ img {
   max-width: 100%; }
 
 a {
-  color: #475d3f; }
+  color: #2c3e50; }
   a:visited {
-    color: #4e4e4e; }
+    color: #383e44; }
   a:hover {
-    color: #303f2b;
+    color: #1a252f;
     text-decoration: none; }
 
 /**
@@ -162,11 +162,12 @@ html {
  * 2. Base
  **************/
 .greeting {
-  background: #8caa81;
+  background: #1abc9c;
   color: #fff;
   margin-bottom: 1em;
   padding-bottom: 3em;
-  padding-top: 3em; }
+  padding-top: 3em;
+  position: relative; }
   .greeting::after {
     clear: both;
     content: "";
@@ -180,10 +181,14 @@ html {
     -ms-align-items: center;
     -o-align-items: center;
     align-items: center;
-    -ms-flex-align: center; }
+    -ms-flex-align: center;
+    position: relative;
+    z-index: 2; }
   .greeting .photo-wrapper {
     margin: 0 2em 0 0;
     width: 240px; }
+  .greeting .photo {
+    box-shadow: 0.4rem 0.4rem 0 0.2rem #16a085; }
   .greeting h1 {
     -webkit-box-flex: 1;
     -moz-box-flex: 1;
@@ -193,6 +198,13 @@ html {
     -ms-flex: 1;
     flex: 1;
     margin: 0; }
+  .greeting svg {
+    fill: #16a085;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: auto; }
 
 /*
  * 3. Responsive
@@ -290,8 +302,8 @@ html {
   -webkit-transition: background-color 0.15s ease-out;
   -moz-transition: background-color 0.15s ease-out;
   transition: background-color 0.15s ease-out;
-  background: #5a764f;
-  border-bottom: 3px solid #2b3926;
+  background: #1abc9c;
+  border-bottom: 3px solid #16a085;
   border-radius: 4px;
   color: #fff;
   display: inline-block;
@@ -299,11 +311,12 @@ html {
   text-decoration: none;
   position: relative; }
   .button:visited {
-    background-color: #42573b;
+    background-color: #17a689;
+    border-color: #138a72;
     color: #fff; }
   .button:hover {
-    background: #719464;
-    border-bottom-color: #42573b;
+    background: #1dd2af;
+    border-bottom-color: #138a72;
     color: #fff; }
 
 /*

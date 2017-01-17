@@ -15,7 +15,8 @@
  * 1. Config
  ******************/
 
-$button-color: darken(#8caa81, 20%);
+$button-color: #1abc9c;
+$button-border-color: #16a085;
 $button-text-color: #fff;
 
 
@@ -27,7 +28,7 @@ $button-text-color: #fff;
   @include transition(background-color 0.15s ease-out);
 
   background: $button-color;
-  border-bottom: 3px solid darken($button-color, 20%);
+  border-bottom: 3px solid $button-border-color;
   border-radius: 4px;
   color: $button-text-color;
   display: inline-block;
@@ -36,13 +37,14 @@ $button-text-color: #fff;
   position: relative;
   
   &:visited {
-    background-color: darken($button-color, 10%);
+    background-color: darken($button-color, 5%);
+    border-color: darken($button-border-color, 5%);
     color: $button-text-color;
   }
 
   &:hover {
-    background: lighten($button-color, 10%);
-    border-bottom-color: darken($button-color, 10%);
+    background: lighten($button-color, 5%);
+    border-bottom-color: darken($button-border-color, 5%);
 
     color: $button-text-color;
   }

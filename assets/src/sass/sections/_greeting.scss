@@ -15,7 +15,8 @@
  * 1. Config
  ****************/
 
-$background: #8caa81;
+$background: #1abc9c;
+$background-alt: #16a085;
 $color: #fff;
 
 
@@ -31,9 +32,12 @@ $color: #fff;
   margin-bottom: 1em; 
   padding-bottom: 3em; 
   padding-top: 3em;
+  position: relative;
   
   .container.flex {
     @include align-items(center);
+    position: relative;
+    z-index: 2;
   }
 
   .photo-wrapper {
@@ -41,10 +45,23 @@ $color: #fff;
     width: 240px;
   }
 
+  .photo {
+    box-shadow: 0.4rem 0.4rem 0 0.2rem #16a085;
+  }
+
   h1 {
     @include flex(1);
     
     margin: 0;
+  }
+
+  svg {
+    fill: $background-alt;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: auto;
   }
 }
 
