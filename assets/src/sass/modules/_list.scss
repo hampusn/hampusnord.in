@@ -14,17 +14,71 @@
  * 2. Base
  ******************/
 
-.list {
-  li {
-    margin-bottom: 0.2em; 
+.box-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  padding-left: 0;
+  width: 100%;
+}
+
+.box-list-item {
+  display: block;
+  margin-bottom: 2%;
+  width: 49%;
+}
+
+.box-list-item__link {
+  border-bottom: 0;
+  border-radius: 0;
+  display: block;
+  height: 100%;
+  line-height: 1.2;
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+.box-list-item__link .icon {
+  display: block;
+  height: 6vw;
+  margin: 0 auto 0.5rem;
+  max-height: 4rem;
+  width: 100%;
+}
+
+
+/*
+ * 3. Responsive
+ *******************/
+
+@include mq($tablet) {
+  .box-list-item__link {
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .box-list-item__link .icon {
+    display: inline-block;
+    margin-bottom: 0;
+    width: 6vw;
+  }
+
+  .box-list-item__link-text {
+    flex: 1;
+    margin-left: 1em;
   }
 }
 
-.list--clean {
-  list-style: none;
-  padding-left: 0;
-}
+@include mq($mobile) {
+  .box-list {
+    display: block;
+  }
 
-.list-item {
-  display: block;
+  .box-list-item {
+    width: 100%;
+  }
+
 }
