@@ -15,8 +15,8 @@
  * 1. Config
  ****************/
 
-$background: #1abc9c;
-$background-alt: #16a085;
+$background: #34495e;
+$background-alt: #2c3e50;
 $color: #fff;
 
 
@@ -46,7 +46,7 @@ $color: #fff;
   }
 
   .photo {
-    box-shadow: 0.4rem 0.4rem 0 0.2rem #16a085;
+    box-shadow: 0.4rem 0.4rem 0 0.2rem $background-alt;
   }
 
   h1 {

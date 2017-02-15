@@ -9,7 +9,7 @@
  * assets/src/sass/main.scss
  * 
  * Version: 0.2.1
- * Latest built: Tue Feb 14 2017 20:31:43 GMT+0100 (CET)
+ * Latest built: Wed Feb 15 2017 18:25:41 GMT+0100 (CET)
  */
 /**
  * @file
@@ -162,7 +162,7 @@ html {
  * 2. Base
  **************/
 .greeting {
-  background: #1abc9c;
+  background: #34495e;
   color: #fff;
   margin-bottom: 1em;
   padding-bottom: 3em;
@@ -188,7 +188,7 @@ html {
     margin: 0 2em 0 0;
     width: 240px; }
   .greeting .photo {
-    box-shadow: 0.4rem 0.4rem 0 0.2rem #16a085; }
+    box-shadow: 0.4rem 0.4rem 0 0.2rem #2c3e50; }
   .greeting h1 {
     -webkit-box-flex: 1;
     -moz-box-flex: 1;
@@ -199,7 +199,7 @@ html {
     flex: 1;
     margin: 0; }
   .greeting svg {
-    fill: #16a085;
+    fill: #2c3e50;
     height: 100%;
     left: 0;
     position: absolute;
@@ -302,21 +302,17 @@ html {
   -webkit-transition: background-color 0.15s ease-out;
   -moz-transition: background-color 0.15s ease-out;
   transition: background-color 0.15s ease-out;
-  background: #1abc9c;
-  border-bottom: 3px solid #16a085;
-  border-radius: 4px;
+  background: #34495e;
   color: #fff;
   display: inline-block;
   padding: 0.4em 0.8em;
   text-decoration: none;
   position: relative; }
   .button:visited {
-    background-color: #17a689;
-    border-color: #138a72;
+    background-color: #2b3c4e;
     color: #fff; }
   .button:hover {
-    background: #1dd2af;
-    border-bottom-color: #138a72;
+    background: #3d566e;
     color: #fff; }
 
 /*
