@@ -14,7 +14,7 @@
  *************/
 
 .contact {
-  font-family: $font-stack-heading;
+  font-family: var(--font-stack-heading);
   font-size: 1.3em;
   margin-top: 3em; 
   text-align: center;

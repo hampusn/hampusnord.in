@@ -1,0 +1,35 @@
+/*!
+ * @file
+ * @group hampusnordin
+ * @author Hampus Nordin
+ * 
+ * Main styling
+ * 
+ * Compiled and concat version. Check repo for source or:
+ * assets/src/css/main.css
+ * 
+ * Version: {{version}}
+ * Latest built: {{timestamp}}
+ */
+
+@import "variables.css";
+
+/* Misc & Helpers */
+@import "misc/helpers.css";
+
+/* Base contains default styling for generic elements. */
+@import "base.css";
+
+/* Layout partials contains generic rules for the structure such as the grids/columns. */
+@import "layout/structure.css";
+
+/* Sections */
+@import "sections/greeting.css";
+@import "sections/experience.css";
+@import "sections/contact.css";
+
+/* Modules are reusable parts. */
+@import "modules/button.css";
+@import "modules/icon.css";
+@import "modules/list.css";
+@import "modules/photo.css";

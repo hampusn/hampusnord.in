@@ -1,0 +1,34 @@
+/**
+ * @file
+ * @group hampusnordin
+ * 
+ * Contains variables.
+ */
+
+:root {
+  --color-background: #ecf0f1;
+  --color-background-alt: #ecf0f1;
+
+  --color-text: #2c3e50;
+  --color-text-alt: #fff;
+  --color-text--visited: #383e44;
+  --color-text--hover: #1a252f;
+
+  --font-stack-base: "Roboto", sans-serif;
+  --font-stack-heading: "Source Sans Pro", sans-serif;
+
+  --container-width: 1024px;
+
+  --button-color: #34495e;
+  --button-color--visited: #2b3c4e;
+  --button-color--hover: #3d566e;
+  --button-border-color: #16a085;
+  --button-text-color: #fff;
+
+  --color-background--greeting: #34495e;
+  --color-background-alt--greeting: #2c3e50;
+  --color-text--greeting: #fff;
+}
+
+@custom-media --mobile screen and (max-width: 480px);
+@custom-media --tablet screen and (min-width: 481px) and (max-width: 768px);

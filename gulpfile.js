@@ -1,60 +1,83 @@
-var project = require('./package.json'),
-    gulp = require('gulp');
-    sass = require('gulp-sass'),
-    neat = require('node-neat'),
-    uglify = require('gulp-uglify'),
-    imagemin = require('gulp-imagemin'),
-    watch = require('gulp-watch'),
-    concat = require('gulp-concat'),
-    replace = require('gulp-replace');
+const project   = require('./package.json');
+const gulp      = require('gulp');
+const replace   = require('gulp-replace');
+const postcss   = require('gulp-postcss');
+const cssimport = require('postcss-import');
+const cssnext   = require('postcss-cssnext');
+const cssnano   = require('cssnano');
+const path      = require('path');
+const uglify    = require('gulp-uglify');
+const concat    = require('gulp-concat');
+const imagemin  = require('gulp-imagemin');
 
-// Styles
-gulp.task('sass', function () {
-  var now = new Date();
+const conf = {
+  "watch": {
+    "css": "./assets/src/css/**/*.css",
+    "js": "./assets/src/js/**/*.js"
+  },
+  "src": {
+    "css": "./assets/src/css/main.css",
+    "js": ["./assets/src/js/vendor/*.js", "./assets/src/js/utils/*.js", "./assets/src/js/modules/*.js", "./assets/src/js/main.js"],
+    "img": "./assets/src/img/*.{jpg,jpeg,png,gif,svg}"
+  },
+  "dest": {
+    "css": "./assets/build/css",
+    "js": "./assets/build/js",
+    "img": "./assets/build/img"
+  },
+  "browsers": ['> 1%', 'Last 2 versions', 'IE 10']
+};
 
-  gulp.src('./assets/src/sass/**/*.scss')
-    .pipe(sass({
-      'includePaths': ['styles'].concat(neat.includePaths)
-    }))
+gulp.task('css', () => {
+  let now = new Date();
+
+  return gulp.src(conf.src.css)
+    .pipe(postcss([
+      cssimport(),
+      cssnext({
+        "autoprefixer": {
+          "browsers": conf.browsers
+        }
+      }),
+      cssnano({
+        "autoprefixer": false
+      })
+    ]))
     .pipe(replace('{{timestamp}}', now.toString()))
     .pipe(replace('{{version}}', project.version))
-    .pipe(gulp.dest('./assets/build/css/'));
+    .pipe(gulp.dest(conf.dest.css));
 });
 
-// Javascript
-gulp.task('js', function() {
-  gulp.src(['./assets/src/js/*.js', '!./assets/src/js/main.js'])
+gulp.task('js', () => {
+  return gulp.src(conf.src.js)
     .pipe(uglify({
-      'preserveComments': 'some'
+      "output": {
+        "comments": "some"
+      }
     }))
-    .pipe(gulp.dest('./assets/build/js/'));
-
-  gulp.src(['./assets/src/js/modules/*.js', './assets/src/js/main.js'])
-    .pipe(uglify({
-      'preserveComments': 'some'
+    .pipe(concat('main.js', {
+      "newLine": "\r\n\r\n"
     }))
-    .pipe(concat('main.js', { 'newLine': '\r\n\r\n' }))
-    .pipe(gulp.dest('./assets/build/js/'));
+    .pipe(gulp.dest(conf.dest.js));
 });
 
-// Images
-gulp.task('img', function() {
-  gulp.src('./assets/src/img/**/*.{jpg,jpeg,png,gif,svg}')
+gulp.task('img', () => {
+  return gulp.src(conf.src.img)
     .pipe(imagemin({
       'optimizationLevel': 5,
       'interlaced': true
     }))
-    .pipe(gulp.dest('./assets/build/img/'));
+    .pipe(gulp.dest(conf.dest.img));
 });
 
-// Watch
-gulp.task('watch', function() {
-  // watch style files
-  gulp.watch('./assets/src/sass/**/*.scss', ['sass']);
-  // Watch script files
-  gulp.watch('./assets/src/js/**/*.js', ['js']);
-  // Watch image files
-  gulp.watch('./assets/src/img/*.{jpg,jpeg,png,gif,svg}', ['img']);
+gulp.task('watch-css', () => {
+  return gulp.watch(conf.watch.css, ['css']);
 });
 
-gulp.task('default', ['sass', 'js', 'img', 'watch']);
+gulp.task('watch-js', () => {
+  return gulp.watch(conf.watch.js, ['js']);
+});
+
+gulp.task('watch', ['watch-css', 'watch-js']);
+
+gulp.task('default', ['css', 'js', 'img']);

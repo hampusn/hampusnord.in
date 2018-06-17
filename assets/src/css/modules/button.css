@@ -10,41 +10,28 @@
  * 3. Contextual - Contains styling when in a combination of other modules
  */
 
-
-/*
- * 1. Config
- ******************/
-
-$button-color: #34495e;
-$button-border-color: #16a085;
-$button-text-color: #fff;
-
-
-
 /*
  * 2. Base
  ******************/
 
 .button {
-  @include transition(background-color 0.15s ease-out);
-
-  background: $button-color;
-  color: $button-text-color;
+  background: var(--button-color);
+  color: var(--button-text-color);
   display: inline-block;
   padding: 0.4em 0.8em;
   text-decoration: none;
   position: relative;
+  transition: background-color 0.15s ease-out;
+}
   
-  &:visited {
-    background-color: darken($button-color, 5%);
-    color: $button-text-color;
-  }
+.button:visited {
+  background-color: var(--button-color--visited);
+  color: var(--button-text-color);
+}
 
-  &:hover {
-    background: lighten($button-color, 5%);
-
-    color: $button-text-color;
-  }
+.button:hover {
+  background: var(--button-color--hover);
+  color: var(--button-text-color);
 }
 
 
@@ -52,7 +39,7 @@ $button-text-color: #fff;
  * 3. Contextual
  ******************/
 
-// Extra margin right of the icon when in a button.
+/* Extra margin right of the icon when in a button. */
 .button.icon:before {
   margin-right: 0.5em; 
 }

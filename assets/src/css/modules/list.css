@@ -50,9 +50,9 @@
 
 /*
  * 3. Responsive
- *******************/
+ *******************/ 
 
-@include mq($tablet) {
+@media (--tablet) {
   .box-list-item__link {
     align-items: center;
     display: flex;
@@ -72,7 +72,7 @@
   }
 }
 
-@include mq($mobile) {
+@media (--mobile) {
   .box-list {
     display: block;
   }
@@ -80,5 +80,4 @@
   .box-list-item {
     width: 100%;
   }
-
 }

@@ -14,7 +14,7 @@
  * 2. Base
  ******************/
 
-// Basic styling for a photo/portrait
+/* Basic styling for a photo/portrait */
 .photo {
   border-radius: 50%;
   max-width: 100%;

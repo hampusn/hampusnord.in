@@ -6,9 +6,7 @@
  * Contains helper classes.
  */
 
-// Floats the content to the left/right.
-// Some modules will use these classes to correct 
-// margins and other rules so leave them as they are.
+/* Floats the content to the left/right. Some modules will use these classes to correct margins and other rules so leave them as they are. */
 .pull-left {
   float: left;
 }
@@ -16,7 +14,7 @@
   float: right;
 }
 
-// Simple text centering
+/* Simple text centering */
 .text-centered {
   text-align: center;
 }
