@@ -18,5 +18,9 @@
   "scripts": {
     "gulp": "gulp",
     "local": "python -m SimpleHTTPServer"
+  },
+  "engines": {
+    "npm": "6.1.0",
+    "node": "10.1.0"
   }
 }
