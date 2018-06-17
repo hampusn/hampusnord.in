@@ -30,5 +30,5 @@
   --color-text--greeting: #fff;
 }
 
+@custom-media --tablet screen and (max-width: 768px);
 @custom-media --mobile screen and (max-width: 480px);
-@custom-media --tablet screen and (min-width: 481px) and (max-width: 768px);
