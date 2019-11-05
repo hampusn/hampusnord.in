@@ -1,9 +1,9 @@
 const project   = require('./package.json');
-const gulp      = require('gulp');
+const { series, parallel, src, dest, watch } = require('gulp');
 const replace   = require('gulp-replace');
 const postcss   = require('gulp-postcss');
 const cssimport = require('postcss-import');
-const cssnext   = require('postcss-cssnext');
+const presetenv = require('postcss-preset-env');
 const cssnano   = require('cssnano');
 const path      = require('path');
 const uglify    = require('gulp-uglify');
@@ -28,16 +28,15 @@ const conf = {
   "browsers": ['> 1%', 'Last 2 versions', 'IE 10']
 };
 
-gulp.task('css', () => {
+const css = function css () {
   let now = new Date();
 
-  return gulp.src(conf.src.css)
+  return src(conf.src.css, { allowEmpty: true })
     .pipe(postcss([
       cssimport(),
-      cssnext({
-        "autoprefixer": {
-          "browsers": conf.browsers
-        }
+      presetenv({
+        "stage": 3,
+        "browsers": conf.browsers
       }),
       cssnano({
         "autoprefixer": false
@@ -45,11 +44,11 @@ gulp.task('css', () => {
     ]))
     .pipe(replace('{{timestamp}}', now.toString()))
     .pipe(replace('{{version}}', project.version))
-    .pipe(gulp.dest(conf.dest.css));
-});
+    .pipe(dest(conf.dest.css));
+};
 
-gulp.task('js', () => {
-  return gulp.src(conf.src.js)
+const js = function js () {
+  return src(conf.src.js, { allowEmpty: true })
     .pipe(uglify({
       "output": {
         "comments": "some"
@@ -58,26 +57,25 @@ gulp.task('js', () => {
     .pipe(concat('main.js', {
       "newLine": "\r\n\r\n"
     }))
-    .pipe(gulp.dest(conf.dest.js));
-});
+    .pipe(dest(conf.dest.js));
+};
 
-gulp.task('img', () => {
-  return gulp.src(conf.src.img)
+const img = function img () {
+  return src(conf.src.img, { allowEmpty: true })
     .pipe(imagemin({
       'optimizationLevel': 5,
       'interlaced': true
     }))
-    .pipe(gulp.dest(conf.dest.img));
-});
+    .pipe(dest(conf.dest.img));
+};
 
-gulp.task('watch-css', () => {
-  return gulp.watch(conf.watch.css, ['css']);
-});
+const watchCss = function watchCss () {
+  return watch(conf.watch.css, series(css));
+};
 
-gulp.task('watch-js', () => {
-  return gulp.watch(conf.watch.js, ['js']);
-});
+const watchJs = function watchJs () {
+  return watch(conf.watch.js, series(js));
+};
 
-gulp.task('watch', ['watch-css', 'watch-js']);
-
-gulp.task('default', ['css', 'js', 'img']);
+exports.watch = parallel(watchCss, watchJs);
+exports.default = parallel(css, js, img);
