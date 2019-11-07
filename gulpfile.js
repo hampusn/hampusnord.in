@@ -2,6 +2,8 @@ const project   = require('./package.json');
 const { series, parallel, src, dest, watch } = require('gulp');
 const replace   = require('gulp-replace');
 const postcss   = require('gulp-postcss');
+const cssVars   = require('postcss-css-variables');
+const customMedia = require('postcss-custom-media');
 const cssimport = require('postcss-import');
 const presetenv = require('postcss-preset-env');
 const cssnano   = require('cssnano');
@@ -34,6 +36,8 @@ const css = function css () {
   return src(conf.src.css, { allowEmpty: true })
     .pipe(postcss([
       cssimport(),
+      customMedia(),
+      cssVars(),
       presetenv({
         "stage": 3,
         "browsers": conf.browsers
